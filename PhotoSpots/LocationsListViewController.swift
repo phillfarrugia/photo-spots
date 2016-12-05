@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LocationsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
