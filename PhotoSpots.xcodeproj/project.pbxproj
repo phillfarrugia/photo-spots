@@ -20,6 +20,7 @@
 		F7AB27201DF62B1D004DFC86 /* PhotoSpotsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7AB270A1DF62B1C004DFC86 /* PhotoSpotsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7AB27291DF62BE2004DFC86 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = F7AB27281DF62BE2004DFC86 /* locations.json */; };
 		F7AB272B1DF62E86004DFC86 /* LocationsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */; };
+		F7AB27311DF62F22004DFC86 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB27301DF62F22004DFC86 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		F7AB271B1DF62B1D004DFC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7AB27281DF62BE2004DFC86 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsMapViewController.swift; path = "View Controllers/LocationsMapViewController.swift"; sourceTree = "<group>"; };
+		F7AB27301DF62F22004DFC86 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,8 @@
 		F7AB270B1DF62B1C004DFC86 /* PhotoSpotsCore */ = {
 			isa = PBXGroup;
 			children = (
+				F7AB272E1DF62F03004DFC86 /* Models */,
+				F7AB272F1DF62F07004DFC86 /* Controllers */,
 				F7AB270C1DF62B1C004DFC86 /* PhotoSpotsCore.h */,
 				F7AB27281DF62BE2004DFC86 /* locations.json */,
 				F7AB270D1DF62B1C004DFC86 /* Info.plist */,
@@ -192,6 +196,21 @@
 				F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F7AB272E1DF62F03004DFC86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7AB27301DF62F22004DFC86 /* Location.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F7AB272F1DF62F07004DFC86 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +325,7 @@
 					F7AB27091DF62B1C004DFC86 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 6VSG94VVFH;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					F7AB27111DF62B1C004DFC86 = {
@@ -395,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AB27311DF62F22004DFC86 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +566,7 @@
 		F7AB27001DF62AD0004DFC86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6VSG94VVFH;
 				INFOPLIST_FILE = PhotoSpots/Info.plist;
@@ -558,6 +580,7 @@
 		F7AB27011DF62AD0004DFC86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6VSG94VVFH;
 				INFOPLIST_FILE = PhotoSpots/Info.plist;
@@ -601,6 +624,7 @@
 		F7AB27211DF62B1D004DFC86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -614,6 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phillfarrugia.PhotoSpotsCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -624,6 +649,7 @@
 		F7AB27221DF62B1D004DFC86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
