@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Location {
+class Location: NSObject {
     
     let name: String
     
@@ -22,6 +22,14 @@ class Location {
         self.latitude = latitude
         self.longitude = longitude
         self.notes = notes
+    }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let rhs = object as? Location else {
+            return false
+        }
+        let lhs = self
+        return lhs.name == rhs.name
     }
     
 }

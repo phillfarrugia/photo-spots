@@ -23,6 +23,7 @@
 		F7AB27311DF62F22004DFC86 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB27301DF62F22004DFC86 /* Location.swift */; };
 		F7AB27331DF62FD7004DFC86 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB27321DF62FD7004DFC86 /* LocalStorage.swift */; };
 		F7AB27351DF63051004DFC86 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB27341DF63051004DFC86 /* Defaults.swift */; };
+		F7AB27371DF630BE004DFC86 /* LocationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB27361DF630BE004DFC86 /* LocationsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		F7AB27301DF62F22004DFC86 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		F7AB27321DF62FD7004DFC86 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalStorage.swift; path = Controllers/LocalStorage.swift; sourceTree = "<group>"; };
 		F7AB27341DF63051004DFC86 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = Controllers/Defaults.swift; sourceTree = "<group>"; };
+		F7AB27361DF630BE004DFC86 /* LocationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsController.swift; path = Controllers/LocationsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		F7AB272F1DF62F07004DFC86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7AB27361DF630BE004DFC86 /* LocationsController.swift */,
 				F7AB27321DF62FD7004DFC86 /* LocalStorage.swift */,
 				F7AB27341DF63051004DFC86 /* Defaults.swift */,
 			);
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AB27371DF630BE004DFC86 /* LocationsController.swift in Sources */,
 				F7AB27351DF63051004DFC86 /* Defaults.swift in Sources */,
 				F7AB27311DF62F22004DFC86 /* Location.swift in Sources */,
 				F7AB27331DF62FD7004DFC86 /* LocalStorage.swift in Sources */,
