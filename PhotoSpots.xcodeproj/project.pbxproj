@@ -19,6 +19,7 @@
 		F7AB271F1DF62B1D004DFC86 /* PhotoSpotsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AB270A1DF62B1C004DFC86 /* PhotoSpotsCore.framework */; };
 		F7AB27201DF62B1D004DFC86 /* PhotoSpotsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7AB270A1DF62B1C004DFC86 /* PhotoSpotsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7AB27291DF62BE2004DFC86 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = F7AB27281DF62BE2004DFC86 /* locations.json */; };
+		F7AB272B1DF62E86004DFC86 /* LocationsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		F7AB27191DF62B1D004DFC86 /* PhotoSpotsCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSpotsCoreTests.swift; sourceTree = "<group>"; };
 		F7AB271B1DF62B1D004DFC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7AB27281DF62BE2004DFC86 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsMapViewController.swift; path = "View Controllers/LocationsMapViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F7AB26E51DF62ACF004DFC86 /* AppDelegate.swift */,
-				F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */,
+				F7AB272C1DF62E8A004DFC86 /* View Controllers */,
 				F7AB26E91DF62ACF004DFC86 /* Main.storyboard */,
 				F7AB26EC1DF62ACF004DFC86 /* Assets.xcassets */,
 				F7AB26EE1DF62ACF004DFC86 /* LaunchScreen.storyboard */,
@@ -181,6 +183,15 @@
 				F7AB271B1DF62B1D004DFC86 /* Info.plist */,
 			);
 			path = PhotoSpotsCoreTests;
+			sourceTree = "<group>";
+		};
+		F7AB272C1DF62E8A004DFC86 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */,
+				F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AB272B1DF62E86004DFC86 /* LocationsMapViewController.swift in Sources */,
 				F7AB26E81DF62ACF004DFC86 /* LocationsListViewController.swift in Sources */,
 				F7AB26E61DF62ACF004DFC86 /* AppDelegate.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LocationsMapViewController.swift
 //  PhotoSpots
 //
 //  Created by Phill Farrugia on 6/12/16.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LocationsListViewController: UIViewController {
+class LocationsMapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Locations"
+        title = "Map"
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +20,4 @@ class LocationsListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
