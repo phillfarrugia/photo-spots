@@ -18,6 +18,7 @@
 		F7AB271C1DF62B1D004DFC86 /* PhotoSpotsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = F7AB270C1DF62B1C004DFC86 /* PhotoSpotsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7AB271F1DF62B1D004DFC86 /* PhotoSpotsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AB270A1DF62B1C004DFC86 /* PhotoSpotsCore.framework */; };
 		F7AB27201DF62B1D004DFC86 /* PhotoSpotsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7AB270A1DF62B1C004DFC86 /* PhotoSpotsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7AB27291DF62BE2004DFC86 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = F7AB27281DF62BE2004DFC86 /* locations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		F7AB27121DF62B1C004DFC86 /* PhotoSpotsCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoSpotsCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AB27191DF62B1D004DFC86 /* PhotoSpotsCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSpotsCoreTests.swift; sourceTree = "<group>"; };
 		F7AB271B1DF62B1D004DFC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7AB27281DF62BE2004DFC86 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F7AB270C1DF62B1C004DFC86 /* PhotoSpotsCore.h */,
+				F7AB27281DF62BE2004DFC86 /* locations.json */,
 				F7AB270D1DF62B1C004DFC86 /* Info.plist */,
 			);
 			path = PhotoSpotsCore;
@@ -345,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AB27291DF62BE2004DFC86 /* locations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
