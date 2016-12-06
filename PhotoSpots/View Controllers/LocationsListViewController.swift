@@ -13,11 +13,18 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet var tableView: UITableView!
     
-    internal var viewModels: [LocationsListCellViewModel]?
+    internal var viewModels: [LocationsListCellViewModel]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Locations"
+        
+        configureTableView()
+        viewModels = reloadViewModels()
     }
     
     private func configureTableView() {
@@ -25,6 +32,12 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
         tableView.rowHeight = LocationsListTableViewCell.cellHeight
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    private func reloadViewModels() -> [LocationsListCellViewModel] {
+        return LocationsController.sharedInstance.locations.map {
+            return LocationsListCellViewModel(location: $0)
+        }
     }
 
 

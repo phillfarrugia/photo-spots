@@ -11,49 +11,64 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LocationsListTableViewCell" customModule="PhotoSpots" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="KGk-i7-Jjw" customClass="LocationsListTableViewCell" customModule="PhotoSpots" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="109"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="riQ-Ad-KIf">
-                        <rect key="frame" x="8" y="8" width="93" height="93"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="riQ-Ad-KIf">
+                        <rect key="frame" x="12" y="12" width="85" height="85.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="93" id="zaY-qc-x0y"/>
+                            <constraint firstAttribute="width" constant="85" id="zaY-qc-x0y"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Location title that takes up two lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSp-9O-lFN">
-                        <rect key="frame" x="113" y="8" width="147.5" height="38.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_No notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ8-LU-Mkq">
-                        <rect key="frame" x="113" y="48.5" width="64.5" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrM-gp-gs8">
+                        <rect key="frame" x="109" y="26.5" width="158" height="57.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Location title that takes up two lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSp-9O-lFN">
+                                <rect key="frame" x="0.0" y="0.0" width="158" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="_10 km away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ8-LU-Mkq">
+                                <rect key="frame" x="0.0" y="40.5" width="158" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wSp-9O-lFN" firstAttribute="leading" secondItem="ZrM-gp-gs8" secondAttribute="leading" id="3Dr-80-c0E"/>
+                            <constraint firstAttribute="bottom" secondItem="DZ8-LU-Mkq" secondAttribute="bottom" id="4IR-ln-YlV"/>
+                            <constraint firstAttribute="trailing" secondItem="wSp-9O-lFN" secondAttribute="trailing" id="COE-PM-NM6"/>
+                            <constraint firstItem="DZ8-LU-Mkq" firstAttribute="top" secondItem="wSp-9O-lFN" secondAttribute="bottom" constant="2" id="CS8-uG-fVH"/>
+                            <constraint firstAttribute="trailing" secondItem="DZ8-LU-Mkq" secondAttribute="trailing" id="T7x-jx-YN1"/>
+                            <constraint firstItem="DZ8-LU-Mkq" firstAttribute="leading" secondItem="ZrM-gp-gs8" secondAttribute="leading" id="sL4-Z5-wV5"/>
+                            <constraint firstItem="wSp-9O-lFN" firstAttribute="top" secondItem="ZrM-gp-gs8" secondAttribute="top" id="xAn-Fy-RhT"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wSp-9O-lFN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0ME-pZ-jkH"/>
-                    <constraint firstItem="riQ-Ad-KIf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dqu-Jm-tIf"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DZ8-LU-Mkq" secondAttribute="trailing" constant="20" id="M7h-Bl-iBT"/>
-                    <constraint firstAttribute="bottom" secondItem="riQ-Ad-KIf" secondAttribute="bottom" constant="8" id="Toe-6j-kHF"/>
-                    <constraint firstItem="riQ-Ad-KIf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cdt-7R-7NG"/>
-                    <constraint firstItem="DZ8-LU-Mkq" firstAttribute="leading" secondItem="riQ-Ad-KIf" secondAttribute="trailing" constant="12" id="hhh-CZ-gER"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wSp-9O-lFN" secondAttribute="trailing" constant="20" id="l8f-RK-GPG"/>
-                    <constraint firstItem="wSp-9O-lFN" firstAttribute="leading" secondItem="riQ-Ad-KIf" secondAttribute="trailing" constant="12" id="rO3-Oq-710"/>
-                    <constraint firstItem="DZ8-LU-Mkq" firstAttribute="top" secondItem="wSp-9O-lFN" secondAttribute="bottom" constant="2" id="u6g-zb-FRP"/>
+                    <constraint firstItem="riQ-Ad-KIf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Dqu-Jm-tIf"/>
+                    <constraint firstItem="ZrM-gp-gs8" firstAttribute="leading" secondItem="riQ-Ad-KIf" secondAttribute="trailing" constant="12" id="I5v-bJ-SZ8"/>
+                    <constraint firstAttribute="trailing" secondItem="ZrM-gp-gs8" secondAttribute="trailing" constant="20" id="SDr-WM-1vb"/>
+                    <constraint firstAttribute="bottom" secondItem="riQ-Ad-KIf" secondAttribute="bottom" constant="12" id="Toe-6j-kHF"/>
+                    <constraint firstItem="ZrM-gp-gs8" firstAttribute="centerY" secondItem="riQ-Ad-KIf" secondAttribute="centerY" id="b3R-vt-ZqB"/>
+                    <constraint firstItem="riQ-Ad-KIf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="cdt-7R-7NG"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageView" destination="riQ-Ad-KIf" id="f9K-v5-DAc"/>
-                <outlet property="subtitleLabel" destination="DZ8-LU-Mkq" id="44s-8P-Yll"/>
+                <outlet property="coverImageView" destination="riQ-Ad-KIf" id="m5b-Oe-r7f"/>
+                <outlet property="distanceLabel" destination="DZ8-LU-Mkq" id="x8u-3H-ooH"/>
                 <outlet property="titleLabel" destination="wSp-9O-lFN" id="EGg-G1-ikf"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="photo-placeholder" width="93" height="93"/>
+    </resources>
 </document>

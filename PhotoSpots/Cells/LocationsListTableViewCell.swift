@@ -11,12 +11,16 @@ import PhotoSpotsCore
 
 class LocationsListTableViewCell: UITableViewCell, Reusable {
     
-    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var coverImageView: UIImageView!
     @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet private var subtitleLabel: UILabel!
+    @IBOutlet private var distanceLabel: UILabel!
     
     
-    private var viewModel: LocationsListCellViewModel?
+    private var viewModel: LocationsListCellViewModel? {
+        didSet {
+            configure(forViewModel: viewModel)
+        }
+    }
     
     static let cellHeight: CGFloat = 110.0
     
@@ -28,6 +32,13 @@ class LocationsListTableViewCell: UITableViewCell, Reusable {
             return cell
         }
         return nil
+    }
+    
+    private func configure(forViewModel viewModel: LocationsListCellViewModel?) {
+        if let viewModel = viewModel {
+            titleLabel.text = viewModel.title
+            distanceLabel.text = viewModel.distance
+        }
     }
     
 }
