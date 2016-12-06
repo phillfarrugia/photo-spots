@@ -9,9 +9,11 @@
 import UIKit
 import PhotoSpotsCore
 
-class LocationsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LocationsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserLocationHandlerDelegate {
     
     @IBOutlet var tableView: UITableView!
+    
+    let locationHandler = UserLocationHandler()
     
     internal var viewModels: [LocationsListCellViewModel]? {
         didSet {
@@ -27,6 +29,14 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
         configureRefreshControl()
         configureNavigation()
         viewModels = reloadViewModels()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        locationHandler.delegate = self
+        locationHandler.requestPermissions()
+        locationHandler.requestOneTimeLocationUpdate()
     }
     
     private func configureTableView() {

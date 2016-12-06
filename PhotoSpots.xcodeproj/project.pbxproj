@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F78FFEDD1DF6645000F09074 /* LocationsListViewController+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78FFEDC1DF6645000F09074 /* LocationsListViewController+Location.swift */; };
+		F79C685D1DF6C98600BB0173 /* UserLocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78FFEDA1DF6615E00F09074 /* UserLocationHandler.swift */; };
 		F7AB26E61DF62ACF004DFC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB26E51DF62ACF004DFC86 /* AppDelegate.swift */; };
 		F7AB26E81DF62ACF004DFC86 /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */; };
 		F7AB26EB1DF62ACF004DFC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AB26E91DF62ACF004DFC86 /* Main.storyboard */; };
@@ -78,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F78FFEDA1DF6615E00F09074 /* UserLocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLocationHandler.swift; path = Controllers/UserLocationHandler.swift; sourceTree = "<group>"; };
+		F78FFEDC1DF6645000F09074 /* LocationsListViewController+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocationsListViewController+Location.swift"; path = "View Controllers/LocationsListViewController+Location.swift"; sourceTree = "<group>"; };
 		F7AB26E21DF62ACF004DFC86 /* PhotoSpots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSpots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AB26E51DF62ACF004DFC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsListViewController.swift; path = "View Controllers/LocationsListViewController.swift"; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			children = (
 				F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */,
 				F7AB273A1DF64445004DFC86 /* LocationsListViewController+TableView.swift */,
+				F78FFEDC1DF6645000F09074 /* LocationsListViewController+Location.swift */,
 				F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */,
 			);
 			name = "View Controllers";
@@ -231,6 +236,7 @@
 		F7AB272F1DF62F07004DFC86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F78FFEDA1DF6615E00F09074 /* UserLocationHandler.swift */,
 				F7AB27361DF630BE004DFC86 /* LocationsController.swift */,
 				F7AB27381DF634C2004DFC86 /* LocationsJSONSerializer.swift */,
 				F7AB27321DF62FD7004DFC86 /* LocalStorage.swift */,
@@ -454,7 +460,9 @@
 				F7AB26E81DF62ACF004DFC86 /* LocationsListViewController.swift in Sources */,
 				F7AB273F1DF6450C004DFC86 /* LocationsListTableViewCell.swift in Sources */,
 				F7AB26E61DF62ACF004DFC86 /* AppDelegate.swift in Sources */,
+				F78FFEDD1DF6645000F09074 /* LocationsListViewController+Location.swift in Sources */,
 				F7AB273B1DF64445004DFC86 /* LocationsListViewController+TableView.swift in Sources */,
+				F79C685D1DF6C98600BB0173 /* UserLocationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +804,7 @@
 				F7AB27221DF62B1D004DFC86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7AB27271DF62B1D004DFC86 /* Build configuration list for PBXNativeTarget "PhotoSpotsCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -804,6 +813,7 @@
 				F7AB27241DF62B1D004DFC86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
