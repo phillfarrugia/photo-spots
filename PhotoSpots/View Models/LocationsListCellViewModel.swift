@@ -10,18 +10,28 @@ import Foundation
 
 public struct LocationsListCellViewModel {
     
-    private let location: Location
+    internal let location: Location
+    
+    internal let distanceFromUser: Double?
     
     public var title: String {
         return location.name
     }
     
-    public var distance: String {
-        return "10km away"
+    public var distance: String? {
+        if let distanceFromUser = self.distanceFromUser {
+            return String(format: "%.3f km away", LocationsListCellViewModel.convertToKilometres(metres: distanceFromUser))
+        }
+        return nil
     }
     
-    public init(location: Location) {
+    public init(location: Location, distanceFromUser: Double? = nil) {
         self.location = location
+        self.distanceFromUser = distanceFromUser
+    }
+    
+    static func convertToKilometres(metres: Double) -> Double {
+        return metres / 1000.0
     }
     
 }

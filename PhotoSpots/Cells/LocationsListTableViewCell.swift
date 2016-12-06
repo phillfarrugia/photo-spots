@@ -37,7 +37,10 @@ class LocationsListTableViewCell: UITableViewCell, Reusable {
     private func configure(forViewModel viewModel: LocationsListCellViewModel?) {
         if let viewModel = viewModel {
             titleLabel.text = viewModel.title
-            distanceLabel.text = viewModel.distance
+            
+            if let distanceText = viewModel.distance {
+                distanceLabel.text = distanceText
+            }
         }
     }
     

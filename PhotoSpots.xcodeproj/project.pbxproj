@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F78FFEDD1DF6645000F09074 /* LocationsListViewController+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78FFEDC1DF6645000F09074 /* LocationsListViewController+Location.swift */; };
-		F79C685D1DF6C98600BB0173 /* UserLocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78FFEDA1DF6615E00F09074 /* UserLocationHandler.swift */; };
+		F79C685E1DF76E5800BB0173 /* UserLocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78FFEDA1DF6615E00F09074 /* UserLocationHandler.swift */; };
 		F7AB26E61DF62ACF004DFC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB26E51DF62ACF004DFC86 /* AppDelegate.swift */; };
 		F7AB26E81DF62ACF004DFC86 /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */; };
 		F7AB26EB1DF62ACF004DFC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AB26E91DF62ACF004DFC86 /* Main.storyboard */; };
@@ -462,7 +462,6 @@
 				F7AB26E61DF62ACF004DFC86 /* AppDelegate.swift in Sources */,
 				F78FFEDD1DF6645000F09074 /* LocationsListViewController+Location.swift in Sources */,
 				F7AB273B1DF64445004DFC86 /* LocationsListViewController+TableView.swift in Sources */,
-				F79C685D1DF6C98600BB0173 /* UserLocationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +479,7 @@
 			files = (
 				F7AB27471DF645E2004DFC86 /* LocationsListCellViewModel.swift in Sources */,
 				F7AB27431DF64543004DFC86 /* Reusable.swift in Sources */,
+				F79C685E1DF76E5800BB0173 /* UserLocationHandler.swift in Sources */,
 				F7AB27391DF634C2004DFC86 /* LocationsJSONSerializer.swift in Sources */,
 				F7AB27371DF630BE004DFC86 /* LocationsController.swift in Sources */,
 				F7AB27351DF63051004DFC86 /* Defaults.swift in Sources */,

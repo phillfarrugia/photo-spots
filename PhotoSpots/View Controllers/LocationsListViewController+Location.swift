@@ -14,7 +14,9 @@ extension LocationsListViewController {
     // MARK: UserLocationHandlerDelegate
     
     func locationHandlerDidUpdateLocation(location: CLLocation) {
-        print("Did update location")
+        if let viewModels = self.viewModels {
+            self.viewModels = locationHandler.viewModelsWithDistance(fromUserLocation: location, toViewModels: viewModels)
+        }
     }
     
     func locationHandlerFailed(withError error: Error) {

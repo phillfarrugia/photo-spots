@@ -44,4 +44,10 @@ public class UserLocationHandler: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    public func viewModelsWithDistance(fromUserLocation userLocation: CLLocation, toViewModels viewModels: [LocationsListCellViewModel]) -> [LocationsListCellViewModel] {
+        return viewModels.map {
+            let distanceFromUser = userLocation.distance(from: CLLocation(latitude: $0.location.latitude, longitude: $0.location.longitude))
+            return LocationsListCellViewModel(location: $0.location, distanceFromUser: distanceFromUser)
+        }
+    }
 }

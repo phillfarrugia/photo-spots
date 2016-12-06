@@ -13,7 +13,7 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet var tableView: UITableView!
     
-    let locationHandler = UserLocationHandler()
+    internal let locationHandler = UserLocationHandler()
     
     internal var viewModels: [LocationsListCellViewModel]? {
         didSet {
