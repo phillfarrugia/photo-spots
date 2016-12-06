@@ -8,16 +8,18 @@
 
 import UIKit
 
-class LocationsListViewController: UIViewController {
+class LocationsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Locations"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func configureTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
 
