@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PhotoSpotsCore
 
 extension LocationsListViewController {
     
@@ -17,11 +18,17 @@ extension LocationsListViewController {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        guard let viewModels = self.viewModels else {
+            return 0
+        }
+        return viewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let viewModels = self.viewModels, viewModels.count > indexPath.row,
+        let locationCell = LocationsListTableViewCell.tableView(tableView: tableView, dequeueReusableCellForViewModel: viewModels[indexPath.row], atIndexPath: indexPath)
+            else { return UITableViewCell() }
+        return locationCell
     }
     
     // MARK: UITableViewDelegate

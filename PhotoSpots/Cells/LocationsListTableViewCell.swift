@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import PhotoSpotsCore
 
-class LocationsListTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+class LocationsListTableViewCell: UITableViewCell, Reusable {
+    
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var subtitleLabel: UILabel!
+    
+    
+    private var viewModel: LocationsListCellViewModel?
+    
+    static let cellHeight: CGFloat = 110.0
+    
+    // MARK: Factory Method
+    
+    class func tableView(tableView: UITableView, dequeueReusableCellForViewModel viewModel: LocationsListCellViewModel? = nil, atIndexPath indexPath: IndexPath) -> LocationsListTableViewCell? {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? LocationsListTableViewCell {
+            cell.viewModel = viewModel
+            return cell
+        }
+        return nil
     }
     
 }

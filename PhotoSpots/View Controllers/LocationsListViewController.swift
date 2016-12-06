@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import PhotoSpotsCore
 
 class LocationsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
+    
+    internal var viewModels: [LocationsListCellViewModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,8 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     private func configureTableView() {
+        tableView.registerReusableCell(LocationsListTableViewCell.self)
+        tableView.rowHeight = LocationsListTableViewCell.cellHeight
         tableView.dataSource = self
         tableView.delegate = self
     }
