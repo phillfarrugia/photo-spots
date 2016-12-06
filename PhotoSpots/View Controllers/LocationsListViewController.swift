@@ -24,6 +24,8 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
         title = "Locations"
         
         configureTableView()
+        configureRefreshControl()
+        configureNavigation()
         viewModels = reloadViewModels()
     }
     
@@ -34,10 +36,35 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
         tableView.delegate = self
     }
     
+    func configureNavigation() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(LocationsListViewController.addBarButtonItemDidPress))
+    }
+    
     private func reloadViewModels() -> [LocationsListCellViewModel] {
         return LocationsController.sharedInstance.locations.map {
             return LocationsListCellViewModel(location: $0)
         }
+    }
+    
+    // MARK: UIBarButtonItems
+    
+    internal func addBarButtonItemDidPress() {
+        // TODO: Show Add View Controller
+    }
+    
+    // MARK: Pull to Refresh
+    
+    private func configureRefreshControl() {
+        let tableViewRefreshControl = UIRefreshControl()
+        tableViewRefreshControl.addTarget(self, action: #selector(LocationsListViewController.didPullToRefresh), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = tableViewRefreshControl
+        }
+    }
+    
+    internal func didPullToRefresh() {
+        viewModels = reloadViewModels()
+        tableView.refreshControl?.endRefreshing()
     }
 
 
