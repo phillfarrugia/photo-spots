@@ -8,39 +8,54 @@
 
 import Foundation
 
-class LocationsController {
+public class LocationsController {
     
-    static let sharedInstance = LocationsController(locations: LocationsController.readLocalLocations())
+    public static let sharedInstance = LocationsController(locations: LocationsController.readLocalLocations())
     
     // MARK: Local Persistance
     
-    static let kLocationsStorageKey = "locations"
+    private static let kLocationsStorageKey = "locations"
     
-    private(set) var locations: [Location]
+    public private(set) var locations: [Location] {
+        didSet {
+            LocalStorage.save(objects: locations, forKey: LocationsController.kLocationsStorageKey)
+        }
+    }
     
-    init(locations: [Location]) {
+    private init(locations: [Location]) {
         self.locations = locations
     }
     
-    static func readLocalLocations() -> [Location] {
+    private static func readLocalLocations() -> [Location] {
         if let existing = LocalStorage.read(objectsForKey: LocationsController.kLocationsStorageKey) {
             return existing as! [Location]
         }
         else {
-            LocalStorage.save(objects: [], forKey: LocationsController.kLocationsStorageKey)
+            LocalStorage.save(objects: readDefaultLocations(), forKey: LocationsController.kLocationsStorageKey)
             return readLocalLocations()
         }
     }
     
+    private static func readDefaultLocations() -> [Location] {
+        if let frameworkBundle = Bundle(identifier: "com.phillfarrugia.PhotoSpotsCore"),
+            let filePath = frameworkBundle.path(forResource: "locations", ofType: "json") {
+            let defaultLocationsURL = URL(fileURLWithPath: filePath)
+            if let defaultLocations = LocationsJSONSerializer.serializeLocations(withFilePathURL: defaultLocationsURL) {
+                return defaultLocations
+            }
+        }
+        return []
+    }
+    
     // MARK: Add Locations
     
-    func add(locations: [Location]) {
+    public func add(locations: [Location]) {
         self.locations.append(contentsOf: locations)
     }
     
     // MARK: Remove Locations
     
-    func remove(locations: [Location]) {
+    public func remove(locations: [Location]) {
         self.locations = self.locations.filter {
             return !locations.contains($0)
         }

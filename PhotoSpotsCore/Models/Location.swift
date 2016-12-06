@@ -8,16 +8,30 @@
 
 import Foundation
 
-class Location: NSObject {
+public class Location: NSObject, NSCoding {
     
-    let name: String
+    public let name: String
     
-    let latitude: Double
-    let longitude: Double
+    public let latitude: Double
+    public let longitude: Double
     
-    let notes: String?
+    public let notes: String?
     
-    init(name: String, latitude: Double, longitude: Double, notes: String? = nil) {
+    public init(name: String, latitude: Double, longitude: Double, notes: String? = nil) {
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+        self.notes = notes
+    }
+    
+    public init?(jsonDict: [String: AnyObject]) {
+        let notes = jsonDict["notes"] as? String
+        guard let name = jsonDict["name"] as? String,
+            let latitude = jsonDict["lat"] as? Double,
+            let longitude = jsonDict["lng"] as? Double else {
+                return nil
+        }
+        
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
@@ -30,6 +44,23 @@ class Location: NSObject {
         }
         let lhs = self
         return lhs.name == rhs.name
+    }
+    
+    // MARK: NSCoding
+    
+    required convenience public init?(coder aDecoder: NSCoder) {
+        guard let name = aDecoder.decodeObject(forKey: "name") as? String else { return nil }
+        let longitude = aDecoder.decodeDouble(forKey: "longitude")
+        let latitude = aDecoder.decodeDouble(forKey: "latitude")
+        let notes = aDecoder.decodeObject(forKey: "notes") as? String
+        self.init(name: name, latitude: latitude, longitude: longitude, notes: notes)
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(latitude, forKey: "latitude")
+        aCoder.encode(longitude, forKey: "longitude")
+        aCoder.encode(notes, forKey: "notes")
     }
     
 }

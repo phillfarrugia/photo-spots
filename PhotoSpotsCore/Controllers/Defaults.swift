@@ -8,13 +8,13 @@
 
 import Foundation
 
-class Defaults {
+public class Defaults {
     
     // MARK: Has Run App
     
-    static private let khasRunAppKey = "com.photospots.hasRunApp"
+    private static let khasRunAppKey = "com.photospots.hasRunApp"
     
-    static var hasRunApp: Bool {
+    public static var hasRunApp: Bool {
         get {
             return UserDefaults.standard.bool(forKey: Defaults.khasRunAppKey)
         }
