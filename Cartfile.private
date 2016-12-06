@@ -1,0 +1,6 @@
+github "Quick/Quick"
+github "Quick/Nimble"
+
+github "Alamofire/Alamofire"
+github "Alamofire/AlamofireImage"
+github "jathu/UIImageColors"
