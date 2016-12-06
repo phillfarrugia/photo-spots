@@ -28,6 +28,7 @@
 		F7AB273B1DF64445004DFC86 /* LocationsListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB273A1DF64445004DFC86 /* LocationsListViewController+TableView.swift */; };
 		F7AB273F1DF6450C004DFC86 /* LocationsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB273D1DF6450C004DFC86 /* LocationsListTableViewCell.swift */; };
 		F7AB27401DF6450C004DFC86 /* LocationsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AB273E1DF6450C004DFC86 /* LocationsListTableViewCell.xib */; };
+		F7AB27431DF64543004DFC86 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB27421DF64543004DFC86 /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		F7AB273A1DF64445004DFC86 /* LocationsListViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocationsListViewController+TableView.swift"; path = "View Controllers/LocationsListViewController+TableView.swift"; sourceTree = "<group>"; };
 		F7AB273D1DF6450C004DFC86 /* LocationsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsListTableViewCell.swift; path = Cells/LocationsListTableViewCell.swift; sourceTree = "<group>"; };
 		F7AB273E1DF6450C004DFC86 /* LocationsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationsListTableViewCell.xib; path = Cells/LocationsListTableViewCell.xib; sourceTree = "<group>"; };
+		F7AB27421DF64543004DFC86 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Utilities/Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		F7AB270B1DF62B1C004DFC86 /* PhotoSpotsCore */ = {
 			isa = PBXGroup;
 			children = (
+				F7AB27411DF64528004DFC86 /* Utilities */,
 				F7AB272E1DF62F03004DFC86 /* Models */,
 				F7AB272F1DF62F07004DFC86 /* Controllers */,
 				F7AB270C1DF62B1C004DFC86 /* PhotoSpotsCore.h */,
@@ -240,6 +243,14 @@
 				F7AB273E1DF6450C004DFC86 /* LocationsListTableViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		F7AB27411DF64528004DFC86 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F7AB27421DF64543004DFC86 /* Reusable.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AB27431DF64543004DFC86 /* Reusable.swift in Sources */,
 				F7AB27391DF634C2004DFC86 /* LocationsJSONSerializer.swift in Sources */,
 				F7AB27371DF630BE004DFC86 /* LocationsController.swift in Sources */,
 				F7AB27351DF63051004DFC86 /* Defaults.swift in Sources */,
