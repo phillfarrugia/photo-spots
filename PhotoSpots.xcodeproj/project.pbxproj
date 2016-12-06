@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F78FFEDD1DF6645000F09074 /* LocationsListViewController+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78FFEDC1DF6645000F09074 /* LocationsListViewController+Location.swift */; };
 		F79C685E1DF76E5800BB0173 /* UserLocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78FFEDA1DF6615E00F09074 /* UserLocationHandler.swift */; };
+		F79C68601DF7731400BB0173 /* LocationsListViewController+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C685F1DF7731400BB0173 /* LocationsListViewController+Errors.swift */; };
 		F7AB26E61DF62ACF004DFC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB26E51DF62ACF004DFC86 /* AppDelegate.swift */; };
 		F7AB26E81DF62ACF004DFC86 /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */; };
 		F7AB26EB1DF62ACF004DFC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AB26E91DF62ACF004DFC86 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		F78FFEDA1DF6615E00F09074 /* UserLocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLocationHandler.swift; path = Controllers/UserLocationHandler.swift; sourceTree = "<group>"; };
 		F78FFEDC1DF6645000F09074 /* LocationsListViewController+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocationsListViewController+Location.swift"; path = "View Controllers/LocationsListViewController+Location.swift"; sourceTree = "<group>"; };
+		F79C685F1DF7731400BB0173 /* LocationsListViewController+Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocationsListViewController+Errors.swift"; path = "View Controllers/LocationsListViewController+Errors.swift"; sourceTree = "<group>"; };
 		F7AB26E21DF62ACF004DFC86 /* PhotoSpots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSpots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AB26E51DF62ACF004DFC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsListViewController.swift; path = "View Controllers/LocationsListViewController.swift"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				F7AB26E71DF62ACF004DFC86 /* LocationsListViewController.swift */,
 				F7AB273A1DF64445004DFC86 /* LocationsListViewController+TableView.swift */,
 				F78FFEDC1DF6645000F09074 /* LocationsListViewController+Location.swift */,
+				F79C685F1DF7731400BB0173 /* LocationsListViewController+Errors.swift */,
 				F7AB272A1DF62E86004DFC86 /* LocationsMapViewController.swift */,
 			);
 			name = "View Controllers";
@@ -459,6 +462,7 @@
 				F7AB272B1DF62E86004DFC86 /* LocationsMapViewController.swift in Sources */,
 				F7AB26E81DF62ACF004DFC86 /* LocationsListViewController.swift in Sources */,
 				F7AB273F1DF6450C004DFC86 /* LocationsListTableViewCell.swift in Sources */,
+				F79C68601DF7731400BB0173 /* LocationsListViewController+Errors.swift in Sources */,
 				F7AB26E61DF62ACF004DFC86 /* AppDelegate.swift in Sources */,
 				F78FFEDD1DF6645000F09074 /* LocationsListViewController+Location.swift in Sources */,
 				F7AB273B1DF64445004DFC86 /* LocationsListViewController+TableView.swift in Sources */,

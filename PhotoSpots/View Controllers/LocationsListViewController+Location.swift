@@ -20,7 +20,7 @@ extension LocationsListViewController {
     }
     
     func locationHandlerFailed(withError error: Error) {
-        print("error")
+        handleLocationUpdateError()
     }
     
 }

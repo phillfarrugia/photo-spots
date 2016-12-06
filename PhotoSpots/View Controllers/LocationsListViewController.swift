@@ -34,9 +34,7 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        locationHandler.delegate = self
-        locationHandler.requestPermissions()
-        locationHandler.requestOneTimeLocationUpdate()
+        calculateLocationDistances()
     }
     
     private func configureTableView() {
@@ -54,6 +52,12 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
         return LocationsController.sharedInstance.locations.map {
             return LocationsListCellViewModel(location: $0)
         }
+    }
+    
+    internal func calculateLocationDistances() {
+        locationHandler.delegate = self
+        locationHandler.requestPermissions()
+        locationHandler.requestOneTimeLocationUpdate()
     }
     
     // MARK: UIBarButtonItems
@@ -74,6 +78,7 @@ class LocationsListViewController: UIViewController, UITableViewDataSource, UITa
     
     internal func didPullToRefresh() {
         viewModels = reloadViewModels()
+        calculateLocationDistances()
         tableView.refreshControl?.endRefreshing()
     }
 

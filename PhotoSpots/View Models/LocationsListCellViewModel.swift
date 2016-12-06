@@ -20,9 +20,9 @@ public struct LocationsListCellViewModel {
     
     public var distance: String? {
         if let distanceFromUser = self.distanceFromUser {
-            return String(format: "%.3f km away", LocationsListCellViewModel.convertToKilometres(metres: distanceFromUser))
+            return String(format: "%.2f km away", LocationsListCellViewModel.convertToKilometres(metres: distanceFromUser))
         }
-        return nil
+        return "Calculating distance..."
     }
     
     public init(location: Location, distanceFromUser: Double? = nil) {
